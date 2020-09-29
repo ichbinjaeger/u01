@@ -14,6 +14,7 @@ body {
     background-color: $grey-light;
     font-family: $sans-font;
     color: $primary;
+    font-size: 16px;
 }
 
 p {
@@ -38,7 +39,7 @@ a {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 3.5em;
     text-transform: uppercase;
 }
 
@@ -51,12 +52,13 @@ h1 {
     // background-image: url(../img/header_bg.jpg);
     // background-size: cover;
     // background-position: center;
+    // position: relative;
 
     .header-container {
         display: flex;
         margin: 0 auto;
         width: $container-width;
-        height: 500px;
+        height: 80vh;
         justify-content: space-between;
         padding-top: 1em;
 
@@ -135,8 +137,8 @@ nav {
 
         .frontend,
         .backend {
-            background-color: $grey-light;
-            border: 1px solid $grey-light;
+            
+            border: 3px solid $primary;
             border-radius: 15px;
             padding: 1em;
             margin-top: 1.5em;
@@ -164,6 +166,16 @@ nav {
     margin: 0 auto;
     padding: $section-padding;
 
+    .about {
+        .row {
+            display: flex;
+            
+            .portrait {
+                margin-top: -10em;
+            }
+        }
+    }
+
     p {
         font-size: 26px;
         margin-bottom: 1em;
@@ -173,6 +185,21 @@ nav {
         margin: 0 auto;
         width: 100%;
         height: 800px;
+    }
+
+}
+.video {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    // text-align: left;
+    background-color: antiquewhite;
+
+    iframe {
+        width:1280px;
+        height: 720px;
     }
 }
 
@@ -219,8 +246,78 @@ nav {
     }
 }
 
-@media only screen and (max-width: 800px) {
+// tablets
+@media only screen and (max-width: 1000px) {
+
+    .fullstack-container {
+        article {
+            .row {
+                flex-direction: column;
+
+                .frontend,.backend {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    [class*="col-"] {
+    width: 100%;
+  }
+
+    .contact-container {
+        address {
+            .row {
+                flex-direction: column;
+
+                .social-media {
+                    // margin-top: 1em;
+                    justify-content: start;
+
+                    img {
+                        margin: 1em 1em 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px){
     body {
-        font-family: 'Courier New', Courier, monospace;
+
+        h1 {
+            font-size: 1.8em;
+        }
+    }
+
+    .page-header {
+
+        .header-container {
+            height: 15vh;
+            flex-wrap: wrap;
+    
+            .col-3 {
+                width: 50%;
+            }
+            .presentation {
+                font-size: .5em;
+            }
+        }
+    }
+
+    nav {
+
+        .row-5 {
+            margin-right: 0;
+    
+            .menu {
+                font-size: .8em;
+            }
+        }
+    } 
+    
+    .hide {
+        display: none;
     }
 }
