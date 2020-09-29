@@ -255,4 +255,10 @@ nav .row-1 .arrow-down {
   margin-left: 50px;
   height: 50px;
 }
+
+@media only screen and (max-width: 800px) {
+  body {
+    font-family: 'Courier New', Courier, monospace;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
